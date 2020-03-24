@@ -1,6 +1,6 @@
 package com.microservice.user.dao;
 
-import com.microservice.user.module.User;
+import com.microservice.microservice.module.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
