@@ -1,8 +1,6 @@
 package com.microservice.user.controller;
 
-import com.microservice.user.module.ResultCode;
-import com.microservice.user.module.ResultInfo;
-import com.microservice.user.module.User;
+import com.microservice.microservice.module.ResultInfo;
 import com.microservice.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,8 +1,8 @@
 package com.microservice.user.service.impl;
 
+import com.microservice.microservice.module.ResultCode;
+import com.microservice.microservice.module.ResultInfo;
 import com.microservice.user.dao.UserMapper;
-import com.microservice.user.module.ResultCode;
-import com.microservice.user.module.ResultInfo;
 import com.microservice.user.module.User;
 import com.microservice.user.service.UserService;
 import org.slf4j.Logger;

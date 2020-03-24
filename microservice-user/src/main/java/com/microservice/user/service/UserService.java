@@ -1,7 +1,6 @@
 package com.microservice.user.service;
 
-import com.microservice.user.module.ResultInfo;
-import com.microservice.user.module.User;
+import com.microservice.microservice.module.ResultInfo;
 
 /**
  * @program: microservice
