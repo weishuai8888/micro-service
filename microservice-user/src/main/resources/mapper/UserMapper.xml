@@ -4,4 +4,6 @@
     <select id="findById" resultType="com.microservice.user.module.User">
         select * from user where id = #{id}
     </select>
+
+
 </mapper>
