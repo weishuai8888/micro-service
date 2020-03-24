@@ -1,4 +1,4 @@
-package com.microservice.user.module;
+package com.microservice.microservice.module;
 
 /**
  * @program: microservice
