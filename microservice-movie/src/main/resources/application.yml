@@ -7,3 +7,11 @@ spring:
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: microservice-movie
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ #设置与eureka server交互的地址，查询和注册服务都需要依赖这个地址；其中eureka必须带上
+  instance:
+    prefer-ip-address: true #表示将自己的IP注册到eureka server；如不配置该属性或将其设置为false，则表示注册微服务所在操作系统的hostname到eureka server
