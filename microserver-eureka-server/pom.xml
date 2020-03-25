@@ -8,11 +8,11 @@
         <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.microservice</groupId>
-    <artifactId>movie</artifactId>
+    <groupId>com.microserver</groupId>
+    <artifactId>eureka-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>movie</name>
-    <description>consumer project for microservice</description>
+    <name>eureka-server</name>
+    <description>eureka-server project for microserver</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -36,7 +36,8 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
     </dependencies>
+
+
 
 </project>
