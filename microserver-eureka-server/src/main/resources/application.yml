@@ -34,7 +34,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://peer1:8761/eureka/ #设置与eureka server交互的地址，查询和注册服务都需要依赖这个地址；多个地址可用逗号分隔。eureka可以不带
----
 
 
 
