@@ -14,12 +14,12 @@ eureka:
     fetch-registry: false #表示是否从eureka server 获取注册信息，默认为true；因为这是一个单点的eureka server，不需要同步其他的eureka server信息，所以设为false
 ---
 spring:
-  profiles: peer1
+  profiles: peer1 #制定profiles=peer1
 server:
   port: 8761 #配置端口号
 eureka:
   instance:
-    hostname: peer1
+    hostname: peer1 #当profiles=peer1时，主机名是peer1
   client:
     service-url:
       defaultZone: http://peer2:8762/eureka/ #设置与eureka server交互的地址，查询和注册服务都需要依赖这个地址；多个地址可用逗号分隔。eureka可以不带，
@@ -27,7 +27,7 @@ eureka:
 spring:
   profiles: peer2
 server:
-  port: 8762 #配置端口号
+  port: 8762
 eureka:
   instance:
     hostname: peer2
