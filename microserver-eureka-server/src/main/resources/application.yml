@@ -8,10 +8,10 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
   application:
     name: microservice-eureka-server
-eureka:
-  client:
-    register-with-eureka: false #表示是否将自己注册到eureka server，默认为true，由于当前应用是eureka server，所以设为false
-    fetch-registry: false #表示是否从eureka server 获取注册信息，默认为true；因为这是一个单点的eureka server，不需要同步其他的eureka server信息，所以设为false
+#eureka:
+ # client:
+  #  register-with-eureka: false #表示是否将自己注册到eureka server，默认为true;
+   # fetch-registry: false #表示是否从eureka server 获取注册信息，默认为true;
 ---
 spring:
   profiles: peer1 #制定profiles=peer1
