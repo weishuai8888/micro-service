@@ -36,4 +36,6 @@ eureka:
       defaultZone: http://peer1:8761/eureka/ #设置与eureka server交互的地址，查询和注册服务都需要依赖这个地址；多个地址可用逗号分隔。eureka可以不带
 
 
-
+# Edit Configurations中按照EurekaServerApplication新增两个Spring Boot
+# Program Arguments中分别填写--spring.profiles.active=***
+# 其中***为application.yml中的eureka.instance.hostname的值
