@@ -8,10 +8,17 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
   application:
     name: microservice-eureka-server
-#eureka:
- # client:
-  #  register-with-eureka: false #表示是否将自己注册到eureka server，默认为true;
-   # fetch-registry: false #表示是否从eureka server 获取注册信息，默认为true;
+  security:
+    basic:
+      enabled: true
+    user:
+      name: root
+      password: root
+eureka:
+  client:
+    register-with-eureka: false #表示是否将自己注册到eureka server，默认为true;
+    fetch-registry: false #表示是否从eureka server 获取注册信息，默认为true;
+
 ---
 spring:
   profiles: peer1 #制定profiles=peer1
@@ -22,7 +29,7 @@ eureka:
     hostname: peer1 #当profiles=peer1时，主机名是peer1
   client:
     service-url:
-      defaultZone: http://peer2:8762/eureka/ #设置与eureka server交互的地址，查询和注册服务都需要依赖这个地址；多个地址可用逗号分隔。eureka可以不带，
+      defaultZone: http://peer2:8762/ #设置与eureka server交互的地址，查询和注册服务都需要依赖这个地址；多个地址可用逗号分隔。eureka可以不带，
 ---
 spring:
   profiles: peer2
@@ -33,7 +40,7 @@ eureka:
     hostname: peer2
   client:
     service-url:
-      defaultZone: http://peer1:8761/eureka/ #设置与eureka server交互的地址，查询和注册服务都需要依赖这个地址；多个地址可用逗号分隔。eureka可以不带
+      defaultZone: http://peer1:8761/ #设置与eureka server交互的地址，查询和注册服务都需要依赖这个地址；多个地址可用逗号分隔。eureka可以不带
 
 
 # Edit Configurations中按照EurekaServerApplication新增两个Spring Boot
