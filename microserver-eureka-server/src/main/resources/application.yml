@@ -16,8 +16,8 @@ spring:
       password: root
 eureka:
   client:
-    register-with-eureka: true #表示是否将自己注册到eureka server，默认为true;
-    fetch-registry: true #表示是否从eureka server 获取注册信息，默认为true;
+    register-with-eureka: false #表示是否将自己注册到eureka server，默认为true;
+    fetch-registry: false #表示是否从eureka server 获取注册信息，默认为true;
 
 ---
 spring:
