@@ -1,5 +1,6 @@
 package com.microservice.movie.controller;
 
+import com.microservice.movie.service.HiRibbonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,12 +19,10 @@ import org.springframework.web.client.RestTemplate;
 public class HelloRibbonController {
 
     @Autowired
-    private RestTemplate restTemplate;
-
-    private static final String URL_HI = "http://microservice-user/hi?name=weishuai";
+    private HiRibbonService hiRibbonService;
 
     @GetMapping("/hi")
     public String hi(@RequestParam String name){
-        return restTemplate.getForObject(URL_HI, String.class);
+        return hiRibbonService.hiService(name);
     }
 }
