@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
  **/
 @RestController
 @RequestMapping("/ribbon")
-public class HelloController {
+public class HelloRibbonController {
 
     @Autowired
     private RestTemplate restTemplate;
